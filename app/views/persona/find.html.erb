@@ -1,0 +1,40 @@
+<div class="container">
+	<h1>Busqueda de Personas</h1>
+	<br>
+	<br>
+
+		<%=form_tag do%>
+	 <div class="form-group">
+	    <%=text_field_tag :name,"",class:"form-control",placeholder:"Name"%>
+        <input type="button" class="btn btn-primary" id="boton_buscar" value="Buscar">
+
+	 	<br>
+	</div>
+	<%end%>
+	
+
+
+	<br>
+
+	
+	<div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Direccion</th>
+					<th>Emial</th>
+					<th>Edad</th>
+				</tr>
+			</thead>
+			<tbody id="respuesta">
+				
+			</tbody>
+		</table>
+	</div>
+    
+</div>
+
+<%= javascript_include_tag "findpersona" %>
+
